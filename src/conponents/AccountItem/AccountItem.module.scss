@@ -1,0 +1,38 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 9px 16px;
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+.avatar {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 12px;
+    border-radius: 50%;
+}
+.infor {
+    flex: 0 1 auto;
+    min-width: 0px;
+}
+
+.name {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    span {
+        margin-right: 6px;
+    }
+    .name-icon-check {
+        color: rgb(32, 213, 236);
+    }
+}
+
+.user-name {
+    color: rgba(22, 24, 35, 0.5);
+}

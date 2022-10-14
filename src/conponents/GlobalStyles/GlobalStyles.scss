@@ -1,0 +1,37 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+:root {
+    --primary: rgba(254, 44, 85, 1);
+    --black: black;
+    --white: white;
+    --text-color: #333;
+
+    //Default layout
+    --default-layout-width: 1150px;
+    --default-layout-header-height: 60px;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    text-rendering: optimizeSpeed;
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+
+a[href] {
+    text-decoration: none;
+    color: var(--text-color);
+}
