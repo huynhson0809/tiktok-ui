@@ -1,5 +1,4 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 :root {
     --primary: rgba(254, 44, 85, 1);
     --black: black;
@@ -20,8 +19,29 @@ html {
 }
 body {
     font-size: 1.6rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'ProximaNova', sans-serif;
     text-rendering: optimizeSpeed;
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url(/assets/fonts/Proxima-Nova-Regular.woff2);
+    font-weight: 400;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url(/assets/fonts/ProximaNova-Semibold.woff2);
+    font-weight: 600;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url(/assets/fonts/Proxima-Nova-Bold.woff2);
+    font-weight: 700;
+}
+@font-face {
+    font-family: SofiaPro;
+    src: url(/assets/fonts/sofiapro-bold.woff2);
+    font-weight: 700;
 }
 
 button,
@@ -34,4 +54,24 @@ input,
 a[href] {
     text-decoration: none;
     color: var(--text-color);
+}
+
+body .tippy-box {
+    background-color: rgba(84, 84, 84, 0.92);
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    .tippy-content {
+        padding: 8px 9px;
+    }
+}
+
+body .tippy-box .tippy-arrow {
+    color: rgba(84, 84, 84, 0.92);
+}
+
+body .tippy-box[data-placement^='bottom'] > .tippy-arrow {
+    top: -1px;
 }
