@@ -9,6 +9,8 @@
         display: flex;
         padding-right: 24px;
         padding-left: 20px;
+        margin-top: var(--default-layout-header-height);
+
         .content {
             flex: 1;
         }
