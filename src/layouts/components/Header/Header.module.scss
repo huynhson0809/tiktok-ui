@@ -1,0 +1,90 @@
+.wrapper {
+    --search-height: 46px;
+    --search-top-spacer: 9px;
+    --search-button-width: 52px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    z-index: 10;
+    justify-content: center;
+    background-color: var(--white);
+    height: var(--default-layout-header-height);
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+}
+
+.inner {
+    height: 100%;
+    width: var(--default-layout-width);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 24px;
+    padding-left: 20px;
+}
+
+.logo-link {
+    display: flex;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.actions-icon,
+.user-avatar {
+    cursor: pointer;
+}
+
+.actions-icon {
+    font-size: 2.2rem;
+    background-color: transparent;
+    margin-left: 16px;
+    position: relative;
+
+    svg {
+        margin-top: 8px;
+    }
+}
+
+.customize {
+    color: blue;
+}
+
+.more-btn {
+    font-size: 2rem;
+    margin-left: 24px;
+    background-color: var(--white);
+    padding: 2px 8px;
+    cursor: pointer;
+}
+
+//user avatar
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-left: 24px;
+    object-fit: cover;
+}
+
+//badge
+.badge {
+    position: absolute;
+    top: 0px;
+    right: -7px;
+    padding: 0px 6px;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--white);
+    font-family: 'ProximaNova', sans-serif;
+    background-color: var(--primary);
+}

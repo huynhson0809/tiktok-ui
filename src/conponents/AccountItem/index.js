@@ -6,9 +6,12 @@ import styles from './AccountItem.module.scss';
 import Image from '../Image';
 
 const cx = classNames.bind(styles);
-function AccountItem({ data }) {
+function AccountItem({ data, onSetResult }) {
+    const handleClickAccount = () => {
+        onSetResult();
+    };
     return (
-        <Link to={`/@${data.nickname}`} className={cx('wrapper')}>
+        <Link to={`/@${data.nickname}`} className={cx('wrapper')} onClick={handleClickAccount}>
             <Image
                 className={cx('avatar')}
                 src={data.avatar}

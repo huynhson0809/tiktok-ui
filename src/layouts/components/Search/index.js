@@ -7,7 +7,7 @@ import AccountItem from '~/conponents/AccountItem';
 import { SearchIcon } from '~/conponents/Icons';
 import { Wrapper as PopperWrapper } from '~/conponents/Popper';
 
-import * as searchServices from '~/apiServices/searchServices';
+import * as searchService from '~/services/searchService';
 import { useDebounce } from '~/hooks';
 import styles from './Search.module.scss';
 
@@ -33,7 +33,7 @@ function Search() {
         const fetchApi = async () => {
             setLoading(true);
 
-            const result = await searchServices.search(debounced);
+            const result = await searchService.search(debounced);
             // console.log(result);
             setSearchResult(result);
 
@@ -60,6 +60,11 @@ function Search() {
 
     const handleClickSearch = () => {};
 
+    const handleOnClickSearchResult = () => {
+        setSearchResult([]);
+        setSearchValue('');
+    };
+
     return (
         //Using a wrapper <div> tag around the reference element solves
         //this by creating a new parentNode context.
@@ -75,7 +80,13 @@ function Search() {
                             {searchResult &&
                                 searchResult.length > 0 &&
                                 searchResult.map((item) => {
-                                    return <AccountItem data={item} key={item.id} />;
+                                    return (
+                                        <AccountItem
+                                            data={item}
+                                            key={item.id}
+                                            onSetResult={handleOnClickSearchResult}
+                                        />
+                                    );
                                 })}
                         </PopperWrapper>
                     </div>
