@@ -10,11 +10,12 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
-
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css'; // optional
-import { InboxIcon, MessageIcon } from '~/conponents/Icons';
+import { Link } from 'react-router-dom';
+import routesConfig from '~/config/routes';
 
+import { InboxIcon, MessageIcon } from '~/conponents/Icons';
 import images from '~/assets/images';
 import Button from '~/conponents/Button';
 import Image from '~/conponents/Image';
@@ -58,7 +59,9 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <img src={images.logo} alt="Tiktok" />
+                    <Link className={cx('logo-link')} to={routesConfig.home}>
+                        <img src={images.logo} alt="Tiktok" />
+                    </Link>
                 </div>
 
                 <Search />
