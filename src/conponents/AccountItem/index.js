@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import classNames from 'classnames/bind';
@@ -28,5 +29,10 @@ function AccountItem({ data, onSetResult }) {
         </Link>
     );
 }
+
+AccountItem.propTypes = {
+    data: PropTypes.object.isRequired,
+    onSetResult: PropTypes.func,
+};
 
 export default AccountItem;
